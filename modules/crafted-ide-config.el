@@ -72,10 +72,10 @@ Example: `(crafted-tree-sitter-load 'python)'"
              (executable-find "tree-sitter"))
     (when (locate-library "treesit-auto")
       ;; prefer tree-sitter modes
+      (require 'treesit-auto)
       (global-treesit-auto-mode)
-      (with-eval-after-load 'treesit-auto
-        ;; install all the tree-sitter grammars
-        (treesit-auto-install-all)))
+      ;; install all the tree-sitter grammars
+      (treesit-auto-install-all))
     (when (locate-library "combobulate")
       ;; perhaps too gross of an application, but the *-ts-modes
       ;; eventually derive from this mode.
