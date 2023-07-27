@@ -44,7 +44,7 @@ Take some of the default keybindings for evil mode."
 (evil-select-search-module 'evil-search-module 'evil-search)
 
 ;; Turn on Evil Nerd Commenter
-(evilnc-default-hotkeys)
+;; (evilnc-default-hotkeys)
 
 ;; Make C-g revert to normal state
 (keymap-set evil-insert-state-map "C-g" 'evil-normal-state)
