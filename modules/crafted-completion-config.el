@@ -35,6 +35,13 @@ ARG is the thing being completed in the minibuffer."
   ;; Cycle back to top/bottom result when the edge is reached
   (customize-set-variable 'vertico-cycle t)
 
+  ;; turn off other narrowing frameworks
+  (when (featurep 'crafted-defaults-config)
+    (fido-mode -1)
+    (fido-vertical-mode -1)
+    (icomplete-mode -1)
+    (icomplete-vertical-mode -1))
+
   ;; Start Vertico
   (vertico-mode 1)
 
